@@ -84,10 +84,7 @@ body {
   list-style-type: none;
   position: relative;
 }
-.sitenav-link:hover,
-.sitenav-link-active {
-  box-shadow:inset 0px -3px 0px 0px var(--footer-bg);
-}
+
 .sitenav-link:active {
   background: rgba(25, 25, 25, 0.7);
   color: white;
@@ -99,12 +96,15 @@ body {
   text-decoration: none;
   color: #000000;
   font-size: 15px;
-  transition: box-shadow 0.3 s ease-in;
+  transition: box-shadow 0.3s ease;
 }
 .sitenav-blue-link {
   color: #ffffff;
 }
-
+.sitenav-link:hover,
+.sitenav-link-active {
+  box-shadow:inset 0px -3px 0px 0px var(--footer-bg);
+}
 .btn {
   padding: 5px 16px;
   margin-top: 8px;
