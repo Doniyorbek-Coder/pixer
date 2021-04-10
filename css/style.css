@@ -84,8 +84,9 @@ body {
   list-style-type: none;
   position: relative;
 }
-.sitenav-link:hover {
-  box-shadow: 0px 3px 0px 0px var(--footer-bg);
+.sitenav-link:hover,
+.sitenav-link-active {
+  box-shadow:inset 0px -3px 0px 0px var(--footer-bg);
 }
 .sitenav-link:active {
   background: rgba(25, 25, 25, 0.7);
@@ -94,8 +95,7 @@ body {
   padding-bottom: 18px;
 }
 .sitenav-link {
-  padding: 15px 16px;
-  padding-top: 18px;
+  padding: 18px 16px;
   text-decoration: none;
   color: #000000;
   font-size: 15px;
@@ -139,23 +139,22 @@ body {
 
 /* HOVER_MENU */
 
-.hover-menu {
+.sitenav-item:hover .hover-menu-list {
+  display: block;
+}
+/* .hover-menu:hover {
+  display: block;
+} */
+.hover-menu-list {  
   display: none;
   position: absolute;
-  top: 40px;
-  left: -6px;
+  left: 50%;
+  transform: translateX(-50%);
+  top:40px;
   width: 124px;
   background: #ffffff;
   box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.1);
   border-radius: 5px;
-}
-.sitenav-link:hover + .hover-menu {
-  display: block;
-}
-.hover-menu:hover {
-  display: block;
-}
-.hover-menu-list {
   padding: 0;
   margin: 0;
   list-style-type: none;
